@@ -4,6 +4,6 @@ data <- read.csv.sql("household_power_consumption.txt", "select * from file wher
 data$Date <- as.Date(data$Date, "%d/%m/%Y")
 
 # Generate Plot
+png(filename = "plot1.png", width = 480, height = 480, bg = "transparent")
 hist(data$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
-dev.copy(png, file = "plot1.png", height = 480, width = 480)
 dev.off()
