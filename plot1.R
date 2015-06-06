@@ -1,5 +1,6 @@
-# Load the file
 library(sqldf)
+
+# Load the file
 data <- read.csv.sql("household_power_consumption.txt", "select * from file where Date in ('1/2/2007', '2/2/2007')", header = TRUE, sep = ";")
 
 # Generate Plot
